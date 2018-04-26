@@ -1,5 +1,4 @@
 <?php
-require('phpQuery/phpQuery.php');
 
 function get_o ($text) {
 
