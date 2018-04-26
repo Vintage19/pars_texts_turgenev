@@ -1,9 +1,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script>
-
-    var fruits = [
-        'http://evakuator-moskva.su/zao/kuntsevo/'];
+    // array with texts
+    var fruits = ['text', 'text2'];
 
 
     $( document ).ready(function() {
@@ -14,14 +13,14 @@
                 $.post(
                     "post.php",
                     {
-                        url: value
+                        text: value
                     },
                     onAjaxSuccess
                 );
 
                 function onAjaxSuccess(data)
                 {
-                    // Здесь мы получаем данные, отправленные сервером и выводим их на экран.
+                    // Here we get the data sent by the server and display them on the screen.
                     $('.res').append("<p>" + value + " - " + data + "</p>");
                 }
 
